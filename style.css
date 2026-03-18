@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Sarasa Gothic SC";
+  src:
+    local("Sarasa Gothic SC"),
+    url("./lib/ttf/SarasaGothicSC-Regular.ttf") format("truetype");
+}
+
 body {
   font-family: "Sarasa Gothic SC";
-  src: url("./lib/ttf/SarasaGothicSC-Regular.ttf");
   margin: 0;
   padding: 0;
   background-color: transparent;
