@@ -1,0 +1,9 @@
+[smtc2web.theme]
+name  = "default"
+version = "0.1.1"
+description = "default theme for smtc2web"
+author = "AkarinLiu"
+repository = "https://github.com/AkarinLiu/smtc2web-theme-template.git"
+tags = ["vue","simple"]
+icon = "icon.png"
+screenshot = "screenshot.png"

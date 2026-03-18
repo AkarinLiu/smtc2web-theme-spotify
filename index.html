@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <title>Now Playing - Live</title>
+        <link rel="icon" type="image/png" href="./icon.png" />
+        <link rel="stylesheet" href="./style.css" />
+        <script type="module" src="./main.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- 专辑封面 -->
+            <div class="album-art">
+                <img v-if="info.album_art" :src="info.album_art" alt="Album Art" />
+                <div v-else class="album-placeholder">🎵</div>
+            </div>
+
+            <!-- 音乐信息 -->
+            <div class="music-info">
+                <h1 class="text-outline">{{ info.title || '–' }}</h1>
+                <h2 class="text-outline">{{ info.artist || '–' }}</h2>
+                <p class="text-outline">{{ info.album || '–' }}</p>
+
+                <!-- 进度条 -->
+                <div class="progress">
+                    <div class="bar" :style="{ width: info.pct + '%' }"></div>
+                </div>
+
+                <!-- 时长 -->
+                <p class="time text-outline">
+                    {{ info.position || '00:00' }} / {{ info.duration || '00:00' }}
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
