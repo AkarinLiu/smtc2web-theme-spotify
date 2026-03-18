@@ -12,24 +12,26 @@
             <!-- 专辑封面 -->
             <div class="album-art">
                 <img v-if="info.album_art" :src="info.album_art" alt="Album Art" />
-                <div v-else class="album-placeholder">🎵</div>
+                <div v-else class="album-placeholder">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                </div>
             </div>
 
             <!-- 音乐信息 -->
             <div class="music-info">
-                <h1 class="text-outline">{{ info.title || '–' }}</h1>
-                <h2 class="text-outline">{{ info.artist || '–' }}</h2>
-                <p class="text-outline">{{ info.album || '–' }}</p>
-
-                <!-- 进度条 -->
-                <div class="progress">
-                    <div class="bar" :style="{ width: info.pct + '%' }"></div>
+                <h1>{{ info.title || '–' }}</h1>
+                <h2>{{ info.artist || '–' }}</h2>
+                
+                <!-- 进度条和时间 -->
+                <div class="progress-container">
+                    <span class="time">{{ info.position || '0:00' }}</span>
+                    <div class="progress">
+                        <div class="bar" :style="{ width: info.pct + '%' }"></div>
+                    </div>
+                    <span class="time">{{ info.duration || '0:00' }}</span>
                 </div>
-
-                <!-- 时长 -->
-                <p class="time text-outline">
-                    {{ info.position || '00:00' }} / {{ info.duration || '00:00' }}
-                </p>
             </div>
         </div>
     </body>

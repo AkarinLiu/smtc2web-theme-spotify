@@ -1,23 +1,35 @@
 body {
-    font-family: "更纱黑体 SC";
-    src: url("./lib/ttf/SarasaGothicSC-Regular.ttf") format("truetype");
-    margin: 2rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 #app {
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(40, 40, 40, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 480px;
+    width: 100%;
 }
 
 .album-art {
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    background: #f0f0f0;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .album-art img {
@@ -33,36 +45,72 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
-    color: #ccc;
+    font-size: 24px;
+    background: #282828;
+    color: #b3b3b3;
 }
 
 .music-info {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
-.progress {
-    width: 100%;
-    background: #eee;
-    height: 8px;
-    border-radius: 4px;
-    margin-top: 1rem;
+
+.music-info h1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.015em;
 }
-.bar {
-    background: #007acc;
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.2s;
+
+.music-info h2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #b3b3b3;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.015em;
 }
-.time {
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: 0.5rem;
-    color: #555;
 }
-.text-outline {
-    color: white !important;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+
+.time {
+    font-size: 10px;
+    color: #b3b3b3;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.015em;
+}
+
+.progress {
+    flex: 1;
+    height: 4px;
+    background: #404040;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bar {
+    background: #1db954;
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.progress:hover .bar {
+    background: #1ed760;
 }
