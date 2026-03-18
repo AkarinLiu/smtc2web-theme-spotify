@@ -1,9 +1,9 @@
 [smtc2web.theme]
-name  = "default"
-version = "0.1.1"
-description = "default theme for smtc2web"
+name  = "spotify"
+version = "0.1.0"
+description = "spotify theme for smtc2web"
 author = "AkarinLiu"
-repository = "https://github.com/AkarinLiu/smtc2web-theme-template.git"
-tags = ["vue","simple"]
+repository = "https://github.com/AkarinLiu/smtc2web-theme-spotify.git"
+tags = ["vue","simple","spotify"]
 icon = "icon.png"
 screenshot = "screenshot.png"
