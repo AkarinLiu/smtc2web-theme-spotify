@@ -1,6 +1,6 @@
 body {
   font-family: "Sarasa Gothic SC";
-  src: url("lib/ttf/SarasaGothicSC-Regular.ttf");
+  src: url("./lib/ttf/SarasaGothicSC-Regular.ttf");
   margin: 0;
   padding: 0;
   background-color: transparent;
