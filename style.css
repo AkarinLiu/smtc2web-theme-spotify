@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Sarasa Gothic SC";
+  font-family: "Sarasa UI SC";
   src:
-    local("Sarasa Gothic SC"),
-    url("./lib/ttf/SarasaGothicSC-Regular.ttf") format("truetype");
+    local("Sarasa UI SC"),
+    url("./lib/ttf/SarasaUiSC-Regular.ttf") format("truetype");
 }
 
 body {
-  font-family: "Sarasa Gothic SC";
+  font-family: "Sarasa UI SC";
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -31,12 +31,12 @@ body {
 }
 
 .album-art {
-  width: 56px;
-  height: 56px;
-  border-radius: 4px;
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .album-art img {
@@ -52,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 40px;
   background: #282828;
   color: #b3b3b3;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .music-info h1 {
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -77,7 +77,7 @@ body {
 }
 
 .music-info h2 {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   color: #b3b3b3;
   margin: 0;
@@ -95,7 +95,7 @@ body {
 }
 
 .time {
-  font-size: 10px;
+  font-size: 14px;
   color: #b3b3b3;
   margin: 0;
   font-variant-numeric: tabular-nums;
