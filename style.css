@@ -1,4 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(
         --smtc-font-family,
         -apple-system,
@@ -9,6 +20,7 @@ body {
         "Hiragino Sans GB",
         sans-serif
     );
+    background: transparent;
 }
 
 #app {
@@ -39,17 +51,6 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-.album-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    background: #282828;
-    color: #b3b3b3;
 }
 
 .music-info {

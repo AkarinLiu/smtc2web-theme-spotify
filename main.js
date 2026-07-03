@@ -1,10 +1,4 @@
 import { createApp, reactive } from "./lib/js/vue.esm-browser.js";
-if (data.font_family) {
-  document.documentElement.style.setProperty(
-    "--smtc-font-family",
-    data.font_family,
-  );
-}
 let lastTitle = "";
 setInterval(async () => {
   const data = await (await fetch("/api/now")).json();
@@ -34,6 +28,9 @@ createApp({
         const data = await r.json();
 
         // 简单比较数据是否变化
+        if (data.font_family) {
+          document.documentElement.style.setProperty("--smtc-font-family", data.font_family);
+        }
         if (JSON.stringify(data) !== JSON.stringify(lastData)) {
           Object.assign(info, {
             ...data,
