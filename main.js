@@ -1,5 +1,10 @@
 import { createApp, reactive } from "./lib/js/vue.esm-browser.js";
-
+if (data.font_family) {
+  document.documentElement.style.setProperty(
+    "--smtc-font-family",
+    data.font_family,
+  );
+}
 createApp({
   setup() {
     const info = reactive({
