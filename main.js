@@ -4,7 +4,11 @@ setInterval(async () => {
   const data = await (await fetch("/api/now")).json();
   if (data.title !== lastTitle) {
     lastTitle = data.title;
-    document.getElementById("cover").src = "/api/image.jpg?t=" + Date.now();
+    const cover = document.getElementById("cover");
+    cover.src = "/api/image.jpg?t=" + Date.now();
+    cover.onerror = () => {
+      cover.src = "./lib/svg/music-solid-full.svg";
+    };
   }
 }, 1000);
 createApp({
@@ -29,7 +33,10 @@ createApp({
 
         // 简单比较数据是否变化
         if (data.font_family) {
-          document.documentElement.style.setProperty("--smtc-font-family", data.font_family);
+          document.documentElement.style.setProperty(
+            "--smtc-font-family",
+            data.font_family,
+          );
         }
         if (JSON.stringify(data) !== JSON.stringify(lastData)) {
           Object.assign(info, {
