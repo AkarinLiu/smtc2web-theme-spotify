@@ -5,6 +5,14 @@ if (data.font_family) {
     data.font_family,
   );
 }
+let lastTitle = "";
+setInterval(async () => {
+  const data = await (await fetch("/api/now")).json();
+  if (data.title !== lastTitle) {
+    lastTitle = data.title;
+    document.getElementById("cover").src = "/api/image.jpg?t=" + Date.now();
+  }
+}, 1000);
 createApp({
   setup() {
     const info = reactive({
