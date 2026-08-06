@@ -83,6 +83,17 @@ body {
     letter-spacing: 0.015em;
 }
 
+.music-info .album {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8e8e8e;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.015em;
+}
+
 .progress-container {
     display: flex;
     align-items: center;

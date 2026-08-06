@@ -12,9 +12,15 @@
             <!-- 专辑封面 -->
             <div class="album-art">
                 <img
-                    id="cover"
-                    src="./lib/svg/music-solid-full.svg"
+                    v-if="info.album_art"
+                    :src="info.album_art"
+                    alt="Album Art"
                     onerror="this.src = './lib/svg/music-solid-full.svg'"
+                />
+                <img
+                    v-else
+                    src="./lib/svg/music-solid-full.svg"
+                    alt="No Album Art"
                 />
             </div>
 
@@ -22,6 +28,7 @@
             <div class="music-info">
                 <h1>{{ info.title || '–' }}</h1>
                 <h2>{{ info.artist || '–' }}</h2>
+                <p class="album">{{ info.album || '–' }}</p>
 
                 <!-- 进度条和时间 -->
                 <div class="progress-container">

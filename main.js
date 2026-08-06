@@ -1,16 +1,4 @@
 import { createApp, reactive } from "./lib/js/vue.esm-browser.js";
-let lastTitle = "";
-setInterval(async () => {
-  const data = await (await fetch("/api/now")).json();
-  if (data.title !== lastTitle) {
-    lastTitle = data.title;
-    const cover = document.getElementById("cover");
-    cover.src = "/api/image.jpg?t=" + Date.now();
-    cover.onerror = () => {
-      cover.src = "./lib/svg/music-solid-full.svg";
-    };
-  }
-}, 1000);
 createApp({
   setup() {
     const info = reactive({
